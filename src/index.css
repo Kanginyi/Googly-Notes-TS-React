@@ -17,3 +17,17 @@ code {
    padding: 0;
    box-sizing: border-box;
 }
+
+.margin-top {
+   margin-top: 5.5rem;
+}
+
+.navbar-name {
+   display: flex;
+   align-items: center;
+   user-select: none;
+}
+
+h3 {
+   font-size: 1.35rem;
+}
