@@ -10,7 +10,7 @@ interface IEachNoteProps {
    handleDelete: (id:string) => void
 }
 
-const EachNote: React.FC<IEachNoteProps> = ({note, handleDelete}) => {
+const EachNote:React.FC<IEachNoteProps> = ({note, handleDelete}) => {
    return (
       <div className="mb-2">
          <Card style={{backgroundColor: note.color}}>
