@@ -11,7 +11,7 @@ const Header:React.FC<IHeaderProps> = () => {
       <Navbar fixed="top" bg="dark" variant="dark">
          <Container>
             <Navbar.Brand>
-               <h1 className="center-align">
+               <h1 className="navbar-name">
                   <img
                      src={googly_icon}
                      alt="Googly Icon"
