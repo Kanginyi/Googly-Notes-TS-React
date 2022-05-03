@@ -15,7 +15,8 @@ const CreateNote:React.FC<ICreateNoteProps> = ({notes, setNotes}) => {
 
    const titleRef = useRef<HTMLInputElement|null>(null);
    const textRef = useRef<HTMLTextAreaElement|null>(null);
-   const colorRef = useRef<HTMLInputElement|null>(null);
+   const bgColorRef= useRef<HTMLInputElement|null>(null);
+   const textColorRef = useRef<HTMLInputElement|null>(null);
 
    const handleSubmit = (e:React.FormEvent<HTMLFormElement>):void => {
       e.preventDefault();
@@ -31,7 +32,8 @@ const CreateNote:React.FC<ICreateNoteProps> = ({notes, setNotes}) => {
          // Typings for the relatedRefs
          title: (titleRef.current as HTMLInputElement).value,
          text: (textRef.current as HTMLTextAreaElement).value,
-         color: (colorRef.current as HTMLInputElement).value,
+         bgColor: (bgColorRef.current as HTMLInputElement).value,
+         textColor: (textColorRef.current as HTMLInputElement).value,
          date: `Created on ${(new Date().toLocaleDateString())} at ${(new Date().toLocaleTimeString())}`
       }]);
 
@@ -67,13 +69,23 @@ const CreateNote:React.FC<ICreateNoteProps> = ({notes, setNotes}) => {
                <Form.Control placeholder="Enter Note" as="textarea" rows={3} ref={textRef}/>
             </Form.Group>
 
-            <Form.Group className="mb-3">
-               <Form.Label htmlFor="colorInput">
-                  <h3>Background Color</h3>
-               </Form.Label>
+            <div style={{display: "flex"}}>
+               <Form.Group className="mb-3">
+                  <Form.Label htmlFor="backgroundColor">
+                     <h3>Background Color</h3>
+                  </Form.Label>
 
-               <Form.Control type="color" id="colorInput" defaultValue="#eeeeee" title="Choose a color" ref={colorRef}/>
-            </Form.Group>
+                  <Form.Control type="color" id="backgroundColor" defaultValue="#eeeeee" title="Choose a color" ref={bgColorRef}/>
+               </Form.Group>
+                  
+               <Form.Group className="mb-3">
+                  <Form.Label htmlFor="textColor">
+                     <h3>Text Color</h3>
+                  </Form.Label>
+
+                  <Form.Control type="color" id="textColor" defaultValue="black" title="Choose a color" ref={textColorRef}/>
+               </Form.Group>
+            </div>
 
             <Button type="submit" variant="primary">
                Submit
