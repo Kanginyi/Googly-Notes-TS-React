@@ -13,7 +13,7 @@ interface IEachNoteProps {
 const EachNote:React.FC<IEachNoteProps> = ({note, handleDelete}) => {
    return (
       <div className="mb-2">
-         <Card style={{backgroundColor: note.color}}>
+         <Card style={{backgroundColor: note.bgColor, color: note.textColor}}>
             <Card.Body>
                <Card.Title>
                   <strong><u>{note.title}</u></strong>
