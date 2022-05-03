@@ -9,7 +9,6 @@ interface IAllNotesProps {
    setNotes: React.Dispatch<React.SetStateAction<Note[]>>
 }
 
-// React.FunctionComponent can be better shortened to be React.FC, both work interchangably
 const AllNotes:React.FC<IAllNotesProps> = ({notes, setNotes}) => {
    const handleDelete = (id:string) => {
       setNotes(notes.filter(note => note.id !== id));
