@@ -1,12 +1,12 @@
 import React from "react";
-import { Container, Navbar } from "react-bootstrap";
+import {Container, Navbar} from "react-bootstrap";
 
 import googly_icon from "../Images/googly-icon.png";
 import notes_img from "../Images/notes-icon.png";
 
 interface IHeaderProps {}
 
-const Header: React.FunctionComponent<IHeaderProps> = () => {
+const Header:React.FC<IHeaderProps> = () => {
    return (
       <Navbar fixed="top" bg="dark" variant="dark">
          <Container>
