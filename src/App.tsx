@@ -1,8 +1,8 @@
 import React, {useState} from "react";
 
+import AllNotes from "./Components/AllNotes";
 import CreateNote from "./Components/CreateNote";
 import Header from "./Components/Header";
-import NotesList from "./Components/NotesList";
 
 import {Note} from "./Models/note.model";
 
@@ -17,7 +17,7 @@ const App = () => {
          <Container className="margin-top">
             <Row>
                <Col>
-                  <NotesList notes={notes} setNotes={setNotes}/>
+                  <AllNotes notes={notes} setNotes={setNotes}/>
                </Col>
             </Row>
                <hr/>
