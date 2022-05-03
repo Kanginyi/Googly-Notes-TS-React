@@ -35,3 +35,19 @@ h3 {
 .color-inputs {
    display: flex;
 }
+
+.align-center {
+   text-align: center;
+}
+
+.grid {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+}
+
+.overflow-wrap {
+   overflow: auto;
+   overflow-wrap: break-word;
+
+   max-width: 100%;
+}
