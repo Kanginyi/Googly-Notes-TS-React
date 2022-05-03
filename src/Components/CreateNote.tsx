@@ -44,7 +44,7 @@ const CreateNote:React.FC<ICreateNoteProps> = ({notes, setNotes}) => {
 
    return (
       <>
-         <h2>CREATE A NOTE</h2>
+         <h2 className="align-center">CREATE A NOTE</h2>
 
          {errorMessage &&
             <Alert variant="danger">
