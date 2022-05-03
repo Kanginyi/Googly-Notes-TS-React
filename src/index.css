@@ -31,3 +31,7 @@ code {
 h3 {
    font-size: 1.35rem;
 }
+
+.color-inputs {
+   display: flex;
+}
