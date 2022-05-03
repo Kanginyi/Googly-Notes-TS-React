@@ -22,7 +22,10 @@ const AllNotes:React.FC<IAllNotesProps> = ({notes, setNotes}) => {
       <>
          <div className="mt-2">
             {renderNotes.length
-               ? renderNotes
+               ? <>
+                  <h2 className="mb-3">NOTES</h2>
+                  {renderNotes}
+                 </>
                : <h2>There are no notes yet.</h2>
             }
          </div>
