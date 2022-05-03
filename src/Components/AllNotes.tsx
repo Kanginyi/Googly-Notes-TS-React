@@ -23,8 +23,11 @@ const AllNotes:React.FC<IAllNotesProps> = ({notes, setNotes}) => {
          <div className="mt-2">
             {renderNotes.length
                ? <>
-                  <h2 className="mb-3">NOTES</h2>
-                  {renderNotes}
+                  <h2 className="mb-3 align-center">NOTES</h2>
+                     {renderNotes.length === 1
+                        ? <div>{renderNotes}</div>
+                        : <div className="grid">{renderNotes}</div>
+                     }
                  </>
                : <h2>There are no notes yet.</h2>
             }
