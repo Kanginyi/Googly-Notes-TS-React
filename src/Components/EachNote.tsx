@@ -12,7 +12,7 @@ interface IEachNoteProps {
 
 const EachNote:React.FC<IEachNoteProps> = ({note, handleDelete}) => {
    return (
-      <div className="mb-2">
+      <div className="m-1 overflow-wrap">
          <Card style={{backgroundColor: note.bgColor, color: note.textColor}}>
             <Card.Body>
                <Card.Title>
