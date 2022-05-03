@@ -1,6 +1,6 @@
 import React from "react";
 
-import Notes from "./Notes";
+import EachNote from "./EachNote";
 
 import {Note} from "../Models/note.model";
 
@@ -15,7 +15,7 @@ const AllNotes:React.FC<IAllNotesProps> = ({notes, setNotes}) => {
    }
 
    const renderNotes:JSX.Element[] = notes?.map(note => {
-      return <Notes key={note.id} note={note} handleDelete={handleDelete}/>
+      return <EachNote key={note.id} note={note} handleDelete={handleDelete}/>
    });
 
    return (
