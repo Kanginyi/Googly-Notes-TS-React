@@ -69,8 +69,8 @@ const CreateNote:React.FC<ICreateNoteProps> = ({notes, setNotes}) => {
                <Form.Control placeholder="Enter Note" as="textarea" rows={3} ref={textRef}/>
             </Form.Group>
 
-            <div style={{display: "flex"}}>
-               <Form.Group className="mb-3">
+            <div className="color-inputs">
+               <Form.Group className="mb-3 me-5">
                   <Form.Label htmlFor="backgroundColor">
                      <h3>Background Color</h3>
                   </Form.Label>
@@ -78,7 +78,7 @@ const CreateNote:React.FC<ICreateNoteProps> = ({notes, setNotes}) => {
                   <Form.Control type="color" id="backgroundColor" defaultValue="#eeeeee" title="Choose a color" ref={bgColorRef}/>
                </Form.Group>
                   
-               <Form.Group className="mb-3">
+               <Form.Group className="mb-3 ms-5">
                   <Form.Label htmlFor="textColor">
                      <h3>Text Color</h3>
                   </Form.Label>
