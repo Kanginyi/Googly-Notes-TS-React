@@ -22,7 +22,7 @@ const CreateNote:React.FC<ICreateNoteProps> = ({notes, setNotes}) => {
 
       // Has the same effect as placing the "required" attribute on the input/textarea
       if (titleRef.current?.value === "" || textRef.current?.value === "") {
-         return setErrorMessage("Please input all fields");
+         return setErrorMessage("Please fill out all fields.");
       }
 
       setErrorMessage("");
@@ -53,7 +53,7 @@ const CreateNote:React.FC<ICreateNoteProps> = ({notes, setNotes}) => {
          <Form className="mt-3 mb-3" onSubmit={handleSubmit}>
             <Form.Group className="mb-3" controlId="formBasicTitle">
                <Form.Label>
-                  Title
+                  <h3>Title</h3>
                </Form.Label>
 
                <Form.Control type="text" placeholder="Enter Title" ref={titleRef}/>
@@ -61,7 +61,7 @@ const CreateNote:React.FC<ICreateNoteProps> = ({notes, setNotes}) => {
 
             <Form.Group className="mb-3" controlId="formBasicText">
                <Form.Label>
-                  Text
+                  <h3>Text</h3>
                </Form.Label>
 
                <Form.Control placeholder="Enter Note" as="textarea" rows={3} ref={textRef}/>
@@ -69,10 +69,10 @@ const CreateNote:React.FC<ICreateNoteProps> = ({notes, setNotes}) => {
 
             <Form.Group className="mb-3">
                <Form.Label htmlFor="colorInput">
-                  Background Color
+                  <h3>Background Color</h3>
                </Form.Label>
 
-               <Form.Control type="color" id="colorInput" defaultValue="#dfdfdf" title="Choose a color" ref={colorRef}/>
+               <Form.Control type="color" id="colorInput" defaultValue="#eee" title="Choose a color" ref={colorRef}/>
             </Form.Group>
 
             <Button type="submit" variant="primary">
