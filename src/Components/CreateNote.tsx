@@ -72,7 +72,7 @@ const CreateNote:React.FC<ICreateNoteProps> = ({notes, setNotes}) => {
                   <h3>Background Color</h3>
                </Form.Label>
 
-               <Form.Control type="color" id="colorInput" defaultValue="#eee" title="Choose a color" ref={colorRef}/>
+               <Form.Control type="color" id="colorInput" defaultValue="#eeeeee" title="Choose a color" ref={colorRef}/>
             </Form.Group>
 
             <Button type="submit" variant="primary">
