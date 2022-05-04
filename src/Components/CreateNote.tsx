@@ -7,10 +7,11 @@ import Button from "react-bootstrap/Button";
 
 interface ICreateNoteProps {
    notes: Note[],
-   setNotes: React.Dispatch<React.SetStateAction<Note[]>>
+   setNotes: React.Dispatch<React.SetStateAction<Note[]>>,
+   setHideNotes: React.Dispatch<React.SetStateAction<boolean>>
 }
 
-const CreateNote:React.FC<ICreateNoteProps> = ({notes, setNotes}) => {
+const CreateNote:React.FC<ICreateNoteProps> = ({notes, setNotes, setHideNotes}) => {
    const [errorMessage, setErrorMessage] = useState<string>("");
 
    const titleRef = useRef<HTMLInputElement|null>(null);
@@ -39,7 +40,8 @@ const CreateNote:React.FC<ICreateNoteProps> = ({notes, setNotes}) => {
 
       // Clearing the inputs
       (titleRef.current as HTMLInputElement).value = "";
-      (textRef.current as HTMLTextAreaElement).value = "";
+      (textRef.current as HTMLTextAreaElement).value = ""; 
+      setHideNotes(false);
    }
 
    return (
