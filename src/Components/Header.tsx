@@ -19,7 +19,7 @@ const Header:React.FC<IHeaderProps> = () => {
                      width="50px"
                   />
 
-                  oogly Boogly Notes
+                  oogly Notes
 
                   <img
                      src={notes_img}
