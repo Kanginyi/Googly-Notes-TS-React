@@ -29,7 +29,7 @@ const AllNotes:React.FC<IAllNotesProps> = ({notes, setNotes}) => {
                         : <div className="grid">{renderNotes}</div>
                      }
                  </>
-               : <h2>There are no notes yet.</h2>
+               : <h2 className="align-center">There are no notes yet.</h2>
             }
          </div>
       </>
