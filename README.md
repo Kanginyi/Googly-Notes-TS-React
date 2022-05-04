@@ -17,7 +17,7 @@ https://googly-notes.vercel.app/
 
 <a name="technologies"/>
 
-##Technologies/Requirements
+## Technologies/Requirements
 
 - TypeScript
 - React
