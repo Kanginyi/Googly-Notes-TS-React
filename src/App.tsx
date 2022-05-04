@@ -19,19 +19,30 @@ const App = () => {
       localStorage.setItem("notes", JSON.stringify(notes));
    }, [notes]);
 
+   const [hideNotes, setHideNotes] = useState<boolean>(false);
+
    return (
       <>
          <Header />
          <Container className="margin-top">
             <Row>
                <Col>
-                  <AllNotes notes={notes} setNotes={setNotes}/>
+                  <AllNotes
+                     notes={notes}
+                     setNotes={setNotes}
+                     hideNotes={hideNotes}
+                     setHideNotes={setHideNotes}
+                  />
                </Col>
             </Row>
                <hr/>
             <Row>
                <Col>
-                  <CreateNote notes={notes} setNotes={setNotes}/>
+                  <CreateNote
+                     notes={notes}
+                     setNotes={setNotes}
+                     setHideNotes={setHideNotes}
+                  />
                </Col>
             </Row>
          </Container>
