@@ -60,7 +60,7 @@ const CreateNote:React.FC<ICreateNoteProps> = ({notes, setNotes, setHideNotes}) 
                   <h3>Title</h3>
                </Form.Label>
 
-               <Form.Control type="text" placeholder="Enter Title" ref={titleRef}/>
+               <Form.Control type="text" placeholder="Enter Note Title" ref={titleRef}/>
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="formBasicText">
@@ -68,7 +68,7 @@ const CreateNote:React.FC<ICreateNoteProps> = ({notes, setNotes, setHideNotes}) 
                   <h3>Text</h3>
                </Form.Label>
 
-               <Form.Control placeholder="Enter Note" as="textarea" rows={3} ref={textRef}/>
+               <Form.Control placeholder="Enter Note Text" as="textarea" rows={4} ref={textRef}/>
             </Form.Group>
 
             <div className="color-inputs">
@@ -77,7 +77,7 @@ const CreateNote:React.FC<ICreateNoteProps> = ({notes, setNotes, setHideNotes}) 
                      <h3>Background Color</h3>
                   </Form.Label>
 
-                  <Form.Control type="color" id="backgroundColor" defaultValue="#eeeeee" title="Choose a color" ref={bgColorRef}/>
+                  <Form.Control type="color" id="backgroundColor" defaultValue="#eeeeee" title="Choose note background color" ref={bgColorRef}/>
                </Form.Group>
                   
                <Form.Group className="mb-3 ms-5">
@@ -85,7 +85,7 @@ const CreateNote:React.FC<ICreateNoteProps> = ({notes, setNotes, setHideNotes}) 
                      <h3>Text Color</h3>
                   </Form.Label>
 
-                  <Form.Control type="color" id="textColor" defaultValue="black" title="Choose a color" ref={textColorRef}/>
+                  <Form.Control type="color" id="textColor" defaultValue="black" title="Choose note text color" ref={textColorRef}/>
                </Form.Group>
             </div>
 
