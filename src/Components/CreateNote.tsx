@@ -89,7 +89,7 @@ const CreateNote:React.FC<ICreateNoteProps> = ({notes, setNotes, setHideNotes}) 
                </Form.Group>
             </div>
 
-            <Button type="submit" variant="primary">
+            <Button type="submit" variant="outline-dark">
                Submit
             </Button>
          </Form>
