@@ -43,7 +43,7 @@ const AllNotes:React.FC<IAllNotesProps> = ({notes, setNotes, hideNotes, setHideN
                      }
 
                   <div className="align-center">
-                     <Button onClick={hideOrShow} variant="outline-primary" size="sm" className="mt-2">
+                     <Button onClick={hideOrShow} variant="outline-dark" size="sm" className="mt-2">
                         {!hideNotes ? "Hide Notes" : "Show Notes"}
                      </Button>
                   </div>
